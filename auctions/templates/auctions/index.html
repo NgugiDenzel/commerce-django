@@ -1,0 +1,35 @@
+{% extends "auctions/layout.html" %} {% block body %}
+<div class="container">
+<h2>Active Listings</h2>
+
+{%for list in lists%}
+<div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-6">
+    <img src="{{list.image.url}}" class="card-img-top img-fluid" alt="..." style="height:150px; width:160px ">
+      </div>
+    
+    <div class="col-md-6">
+    <a href="{%url 'listings' list.Title%}">
+    {{list.Title}}
+    
+    <a href="{%url 'add_watchlist' list.Title %}"
+      ><input type="submit" value="add to watchlist" class="btn btn-primary" /></a
+    ><br />
+  </a>
+</div>
+</div><br>
+</div>
+</div>
+
+{%empty%}
+<h1>no list</h1>
+{% endfor %} {% endblock %} s
+
+  
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+</div>

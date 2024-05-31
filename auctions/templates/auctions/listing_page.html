@@ -1,0 +1,26 @@
+{%extends 'auctions/layout.html'%} {%block body%}
+<div class="container">
+  <h1>listing: {{lists.Title}}</h1>
+  <img src="{{ lists.image.url }}" alt="images" />
+
+  <p>Price: ${{lists.starting_bid}}</p>
+
+  <form method="post" action="{% url 'listings' lists.Title %}">
+    {% csrf_token %}
+    <label for="bid_amount" class="form-label">Place a Bid:</label>
+    <input type="number" name="bid_amount" class="form-control" step="0.01" />
+    <button type="submit" class="btn btn-primary">place Bid</button>
+  </form>
+  <form method="post">
+    {% csrf_token %} {{form.as_p}}
+    <input type="submit" value="comment" />
+  </form>
+  <h3>comments</h3>
+  {%for comment in comments%}
+  <li><strong>{{comment.user.username}}</strong> {{comment.Comment}}</li>
+  {%empty%}
+  <li>no comments</li>
+  {%endfor%} {% if request.user.is_authenticated %} {% if not is_creator and not
+  listing.is_closed %}
+</div>
+{%endif%} {%endblock%}

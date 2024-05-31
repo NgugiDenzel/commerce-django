@@ -1,0 +1,75 @@
+/* auctions/static/auctions/styles.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+header {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 15px;
+}
+
+/* Listing Styles */
+.listing {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.listing img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Bid and Comment Styles */
+.bid-form, .comment-form {
+    margin-top: 20px;
+}
+
+/* Watchlist Styles */
+.watchlist {
+    list-style: none;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav a {
+        display: block;
+        margin-bottom: 10px;
+    }
+}

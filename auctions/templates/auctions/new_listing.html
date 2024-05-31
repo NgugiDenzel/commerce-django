@@ -1,0 +1,7 @@
+{% extends 'auctions/layout.html'%} {%block body%}
+<form action='{%url 'new'%}' method="POST">
+  {{form}}
+  <input type="submit">
+</form>
+
+{%endblock%}
